@@ -1,0 +1,9 @@
+---
+applications:
+- name: quarkus-test
+  memory: 128M
+  instances: 1
+  env:
+   JAVA_OPTS: '-XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M -XX:MaxMetaspaceSize=64000K'
+   JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 10 } }'
+
