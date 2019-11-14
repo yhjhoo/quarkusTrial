@@ -33,4 +33,11 @@ public class ExampleResource {
 
         return Response.accepted().status(200).entity(new Person("Yang", "Huajie")).type(MediaType.APPLICATION_JSON).build();
     }
+
+
+    @GET
+    @Path("/getObject")
+    public Person getObject() {
+        return new Person("Yang", "Huajie");
+    }
 }
